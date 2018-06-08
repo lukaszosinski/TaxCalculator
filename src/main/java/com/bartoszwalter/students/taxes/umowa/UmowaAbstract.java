@@ -3,6 +3,7 @@ package com.bartoszwalter.students.taxes.umowa;
 import com.bartoszwalter.students.taxes.input.Input;
 import com.bartoszwalter.students.taxes.output.Output;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 abstract class UmowaAbstract implements Umowa {
@@ -26,6 +27,10 @@ abstract class UmowaAbstract implements Umowa {
 
     UmowaAbstract() {
 
+    }
+
+    public void loadInputData() throws IOException {
+        this.input.loadInput();
     }
 
     public void setInput(Input input){

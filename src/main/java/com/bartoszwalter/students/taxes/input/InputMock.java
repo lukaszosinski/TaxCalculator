@@ -13,4 +13,9 @@ public class InputMock implements Input{
     public Umowa.RodzajUmowy getRodzajUmowy() {
         return Umowa.RodzajUmowy.PRACA;
     }
+
+    @Override
+    public void loadInput() {
+
+    }
 }

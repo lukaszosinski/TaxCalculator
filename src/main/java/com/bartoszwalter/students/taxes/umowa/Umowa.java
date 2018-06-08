@@ -5,6 +5,7 @@ import com.bartoszwalter.students.taxes.input.Input;
 import com.bartoszwalter.students.taxes.output.Output;
 
 import java.io.IOException;
+import java.security.InvalidParameterException;
 
 
 public interface Umowa {
@@ -24,12 +25,13 @@ public interface Umowa {
             case ZLECENIE:
                 umowa = new UmowaZlecenie();
                 break;
-            default: throw new IOException("Zły rodzaj umowy");
+            default: throw new InvalidParameterException("Ten rodzaj umowy nie jest obslugiwany");
         }
         umowa.setInput(input);
         return umowa;
     }
 
+    void loadInputData() throws IOException;
 
     void oblicz();
     void setOutput(Output output);
