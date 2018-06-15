@@ -33,8 +33,9 @@ public interface Umowa {
 
     void loadInputData() throws IOException;
 
-    void oblicz();
+    double obliczWynagrodzenie();
     void setOutput(Output output);
     void setInput(Input input);
+
 
 }

@@ -16,6 +16,9 @@ public class InputConsole implements Input {
 
     public InputConsole() throws IOException{
         loadInput();
+        isr.close();
+        br.close();
+
     }
 
     @Override
